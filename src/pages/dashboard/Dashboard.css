@@ -106,7 +106,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  gap: 15px;
+  gap: 10px;
   padding: 10px;
   overflow-y: auto;
   max-height: 100%;
@@ -144,11 +144,13 @@
 .action-buttons {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
   width: 100%;
-  max-width: 500px;
+  max-width: 450px;
   align-items: center;
-  padding: 5px 0 15px 0;
+  padding: 0;
+  transform: scale(0.9);
+  transform-origin: center top;
 }
 
 .action-button {
@@ -180,12 +182,12 @@
 }
 
 .play-button {
-  max-width: 400px;
+  max-width: 380px;
 }
 
 .secondary-buttons {
   display: flex;
-  gap: 12px;
+  gap: 10px;
   width: 100%;
   justify-content: center;
   flex-wrap: wrap;
@@ -193,9 +195,9 @@
 
 .manual-button,
 .disconnect-button {
-  max-width: 200px;
+  max-width: 185px;
   flex: 1;
-  min-width: 150px;
+  min-width: 140px;
 }
 
 /* CSS-Styled Buttons (Alternative to Images) */
