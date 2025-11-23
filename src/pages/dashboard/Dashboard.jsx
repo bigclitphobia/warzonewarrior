@@ -145,7 +145,6 @@ const Dashboard = () => {
             
             {/* Action Buttons */}
             <div className="action-buttons">
-              {/* Play Game Button */}
               <button onClick={handlePlayGame} className="action-button play-button">
                 <img 
                   src={window.innerWidth < 768 ? playGameImage : playGameDesktopImage} 
@@ -153,7 +152,6 @@ const Dashboard = () => {
                 />
               </button>
               
-              {/* Secondary Buttons - Manual & Disconnect */}
               <div className="secondary-buttons">
                 <button onClick={openGameManual} className="action-button manual-button">
                   <img 
