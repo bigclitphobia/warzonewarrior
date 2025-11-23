@@ -5,8 +5,6 @@ import { getPlayerProfile, getLeaderboard } from '../../utils/api';
 import PlayerProfileCard from '../../components/PlayerProfileCard';
 import LiveLeaderboard from '../../components/LiveLeaderboard';
 import IAPSection from '../../components/IAPSection';
-import WarriorNamePopup from '../../name';
-import LoginModal from '../../components/LoginModal';
 import { usePrivy } from '@privy-io/react-auth';
 import './Dashboard.css';
 
@@ -27,7 +25,6 @@ const Dashboard = () => {
   const [playerData, setPlayerData] = useState(null);
   const [leaderboardData, setLeaderboardData] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [showNamePopup, setShowNamePopup] = useState(false);
   const navigate = useNavigate();
 
   // Fetch player data
@@ -39,10 +36,6 @@ const Dashboard = () => {
         setLoading(true);
         const data = await getPlayerProfile(address);
         setPlayerData(data);
-        
-        if (!data.name) {
-          setShowNamePopup(true);
-        }
       } catch (error) {
         console.error('Failed to fetch player data:', error);
       } finally {
@@ -105,14 +98,13 @@ const Dashboard = () => {
   }
 
   return (
-    <>
-      <div 
-        className="dashboard-container"
-        style={{ 
-          '--desktop-bg': `url(${connectedBackgroundImage})`,
-          '--mobile-bg': `url(${mobileAfterConnectImage})`
-        }}
-      >
+    <div 
+      className="dashboard-container"
+      style={{ 
+        '--desktop-bg': `url(${connectedBackgroundImage})`,
+        '--mobile-bg': `url(${mobileAfterConnectImage})`
+      }}
+    >
         {/* Festival overlay */}
         <div className="festival-overlay" aria-hidden="true">
           <div className="global-fire">
@@ -145,6 +137,7 @@ const Dashboard = () => {
             
             {/* Action Buttons */}
             <div className="action-buttons">
+              {/* Play Game Button */}
               <button onClick={handlePlayGame} className="action-button play-button">
                 <img 
                   src={window.innerWidth < 768 ? playGameImage : playGameDesktopImage} 
@@ -152,6 +145,7 @@ const Dashboard = () => {
                 />
               </button>
               
+              {/* Secondary Buttons - Manual & Disconnect */}
               <div className="secondary-buttons">
                 <button onClick={openGameManual} className="action-button manual-button">
                   <img 
@@ -176,19 +170,7 @@ const Dashboard = () => {
           </div>
         </div>
       </div>
-
-      {showNamePopup && (
-        <WarriorNamePopup 
-          isOpen={showNamePopup} 
-          onClose={() => setShowNamePopup(false)}
-          onNameSet={(newName) => {
-            setPlayerData(prev => ({ ...prev, name: newName }));
-            setShowNamePopup(false);
-          }}
-        />
-      )}
-    </>
-  );
-};
-
-export default Dashboard;
+    );
+  };
+  
+  export default Dashboard;
