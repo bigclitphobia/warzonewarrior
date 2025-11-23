@@ -11,14 +11,10 @@
   padding: 15px 0;
   border-bottom: 2px solid rgba(236, 201, 75, 0.3);
   margin-bottom: 15px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 
 .leaderboard-title {
-  margin: 0 0 0 80px;
+  margin: 0 0 10px 0;
   font-size: 20px;
   font-weight: 900;
   color: #ecc94b;
@@ -29,16 +25,12 @@
   gap: 10px;
   font-family: 'Rajdhani', sans-serif;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-  line-height: 1;
 }
 
 .title-icon {
   font-size: 24px;
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
   animation: iconPulse 2s ease-in-out infinite;
-  display: flex;
-  align-items: center;
-  line-height: 1;
 }
 
 @keyframes iconPulse {
@@ -49,7 +41,6 @@
 .last-update {
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 6px;
   font-size: 11px;
   color: rgba(255, 255, 255, 0.5);
@@ -93,12 +84,12 @@
 
 .leaderboard-list::-webkit-scrollbar-track {
   background: rgba(0, 0, 0, 0.2);
-  border-radius: 0;
+  border-radius: 10px;
 }
 
 .leaderboard-list::-webkit-scrollbar-thumb {
   background: rgba(236, 201, 75, 0.4);
-  border-radius: 0;
+  border-radius: 10px;
 }
 
 .leaderboard-list::-webkit-scrollbar-thumb:hover {
@@ -112,7 +103,7 @@
   gap: 12px;
   padding: 12px;
   background: rgba(0, 0, 0, 0.3);
-  border-radius: 0;
+  border-radius: 12px;
   border: 1px solid rgba(236, 201, 75, 0.2);
   transition: all 0.3s ease;
   animation: itemFadeIn 0.4s ease-out backwards;
@@ -192,7 +183,7 @@
 .player-avatar {
   width: 40px;
   height: 40px;
-  border-radius: 0;
+  border-radius: 50%;
   background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%);
   border: 2px solid #ecc94b;
   display: flex;
@@ -238,7 +229,7 @@
   gap: 6px;
   background: rgba(236, 201, 75, 0.1);
   padding: 6px 10px;
-  border-radius: 0;
+  border-radius: 20px;
   border: 1px solid rgba(236, 201, 75, 0.3);
 }
 
