@@ -2,7 +2,7 @@
 .profile-card-container {
   width: 100%;
   max-width: 600px;
-  padding: 20px;
+  padding: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -91,7 +91,7 @@
 
 /* Main Content */
 .card-content {
-  padding: 25px 20px;
+  padding: 20px 20px 15px 20px;
   display: flex;
   gap: 20px;
   position: relative;
@@ -284,13 +284,13 @@
 
 /* Achievements Section */
 .achievements-section {
-  padding: 20px;
+  padding: 15px 20px;
   background: rgba(0, 0, 0, 0.2);
   border-top: 2px solid rgba(236, 201, 75, 0.2);
 }
 
 .achievements-title {
-  margin: 0 0 15px 0;
+  margin: 0 0 12px 0;
   font-size: 16px;
   font-weight: 800;
   color: #ecc94b;
@@ -310,7 +310,7 @@
 .achievements-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
+  gap: 10px;
 }
 
 .achievement-item {
@@ -360,7 +360,7 @@
 
 /* Card Footer */
 .card-footer {
-  padding: 15px 20px;
+  padding: 12px 20px;
   background: linear-gradient(135deg, rgba(236, 201, 75, 0.1) 0%, rgba(214, 158, 46, 0.05) 100%);
   border-top: 1px solid rgba(236, 201, 75, 0.2);
   position: relative;
